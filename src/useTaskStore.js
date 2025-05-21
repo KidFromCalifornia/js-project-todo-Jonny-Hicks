@@ -1,20 +1,7 @@
 import { create } from "zustand";
 
 const useTaskStore = create((set) => ({
-  tasks: [
-    {
-      id: "1",
-      text: "Sample task 1",
-      completed: false,
-      createdAt: "2024-06-01T10:00:00.000Z",
-    },
-    {
-      id: "2",
-      text: "Sample task 2",
-      completed: true,
-      createdAt: "2024-06-01T11:00:00.000Z",
-    },
-  ],
+  tasks: [],
   addTask: (task) => set((state) => ({ tasks: [...state.tasks, task] })),
   toggleTaskCompleted: (id) =>
     set((state) => ({
