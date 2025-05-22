@@ -1,7 +1,6 @@
-import TaskList from "./components/TaskList";
-import TaskForm from "./components/TaskForm";
 import NavBar from "./components/NavBar";
 import Race from "./components/Race";
+import TaskFormToggle from "./components/TaskFormToggle";
 
 const App = () => {
   return (
@@ -11,10 +10,8 @@ const App = () => {
         <Race />
       </header>
       <main>
-        <h1 hidden>Cross The Finish line Task App</h1>
-
-        <TaskForm />
-        <TaskList />
+        <h1 hidden>Cross off The Tasks The Finish! </h1>
+        <TaskFormToggle />
       </main>
     </>
   );

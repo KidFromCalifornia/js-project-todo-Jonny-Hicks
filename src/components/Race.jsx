@@ -13,6 +13,7 @@ const RaceContainer = styled.div`
 const RaceCar = styled.img`
   width: 12rem;
   height: 7rem;
+  filter: drop-shadow(-1.7rem 0.05rem 0.5rem rgba(112, 112, 112, 0.4));
 `;
 
 const MovingCar = styled.div`

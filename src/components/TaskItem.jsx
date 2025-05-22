@@ -27,7 +27,7 @@ function TaskItem({ task }) {
         onClick={() => removeTask(task.id)}
         aria-label={`Delete ${task.text}`}
       >
-        Delete
+        <Remove></Remove>
       </button>
     </li>
   );
