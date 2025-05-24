@@ -28,7 +28,7 @@ Learn why Zustand helps: No prop drilling → better control of data.
 🧘 Break – 10 minutes
 
 2️⃣ Session 2: Set up project + Zustand store (60 min)
-Why: Zustand holds your data in one place — like a digital whiteboard.
+Why: Zustand holds your data in one place — like a digital white board.
 
 Create a new React app (npm create vite@latest or CRA).
 

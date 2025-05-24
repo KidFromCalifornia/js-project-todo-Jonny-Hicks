@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useTaskStore from "../useTaskStore";
+import useTaskStore from "../useTaskStore.jsx";
 import TaskCounter from "./TaskCounter";
 
 const RaceContainer = styled.div`
@@ -47,7 +47,7 @@ const Race = () => {
     );
   } else if (incompleteCount === 1 && total > 1) {
     display = (
-      <Flag role="img" aria-label="White flag">
+      <Flag role="img" aria-label=" white flag">
         🏳️
       </Flag>
     );

@@ -1,4 +1,4 @@
-import useTaskStore from "../useTaskStore";
+import useTaskStore from "../useTaskStore.jsx";
 import styled from "styled-components";
 
 const CircleCounter = styled.div`
@@ -7,7 +7,7 @@ const CircleCounter = styled.div`
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background-color: white;
+  background-color: #fdfdfd;
   color: #2d2b2b;
   border-radius: 50%;
   font-family: "Brush Script MT", cursive;
@@ -17,7 +17,7 @@ const CircleCounter = styled.div`
   margin-right: 2rem;
   padding: 2rem;
   border: 0.4rem solid #000000;
-  outline: 0.1rem solid #ffffff;
+  outline: 0.1rem solid #fdfdfd;
 `;
 
 const TaskCounter = () => {

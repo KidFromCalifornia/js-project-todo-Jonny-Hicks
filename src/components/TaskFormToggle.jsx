@@ -15,28 +15,12 @@ const StartingLineWrapper = styled.div`
 const StartingLine = styled.img`
   width: 50%;
   height: auto;
-  transition: transform 0.2s;
+  transition: transform 0.5s;
+  padding-top: 7rem;
 
   &:active {
     transform: scale(1.05);
   }
-`;
-
-const GoText = styled.p`
-  position: absolute;
-  font-size: 5rem;
-  color: white;
-  top: 60%;
-  left: 40%;
-  text-align: center;
-  font-family: "Rubik Mono One", monospace;
-  transform: skewX(40deg);
-  font-style: italic;
-  text-transform: uppercase;
-  text-shadow: 0.1rem 0.1rem 0.2rem #000000;
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.5rem;
 `;
 
 function TaskFormToggle() {
