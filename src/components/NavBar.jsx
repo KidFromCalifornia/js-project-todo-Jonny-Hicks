@@ -14,7 +14,7 @@ const NavBarContainer = styled.nav`
   font-size: 1.5rem;
   font-weight: bold;
 
-  p {
+  h1 {
     margin: 0;
     padding-left: 1rem;
     color: var(--color-text);

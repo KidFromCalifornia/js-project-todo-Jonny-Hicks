@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StartOver = styled.button`
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.5rem;
   color: var(--color-text);
   font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
   text-transform: uppercase;
@@ -11,6 +11,7 @@ const StartOver = styled.button`
   border-radius: 4px;
   letter-spacing: 0.2rem;
   background-color: transparent;
+  height: fit-content;
 
   cursor: pointer;
 
