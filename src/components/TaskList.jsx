@@ -2,13 +2,14 @@ import useTaskStore from "../useTaskStore.jsx";
 import TaskItem from "./TaskItem";
 import styled from "styled-components";
 
-const Columns = styled.div`
+const Columns = styled.section`
   display: flex;
   flex-direction: row;
   align-items: start;
   gap: 2rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 1rem 0;
 `;
 
 const Column = styled.div`
@@ -18,12 +19,14 @@ const Column = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-dark);
   border-radius: 2rem;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 2rem;
   padding: 2rem;
+  box-shadow: inset 0 2px 8px var(--color-dark),
+    inset 0 -2px 8px var(--color-dark);
+  background-color: var(--color-background);
 `;
 
 const TasklistGroup = styled.ul`

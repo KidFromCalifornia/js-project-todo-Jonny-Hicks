@@ -6,13 +6,17 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--color-dark);
+  box-shadow: inset 0 2px 8px var(--color-dark),
+    inset 0 -2px 8px var(--color-dark);
   padding: 1rem;
   border-radius: 2rem;
   flex-wrap: wrap;
   width: 100%;
 
+  background-color: var(--color-background);
+
   @media (min-width: 850px) {
+    margin-top: 2rem;
     gap: 2rem;
     flex-direction: row;
     align-items: center;

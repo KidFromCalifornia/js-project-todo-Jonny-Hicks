@@ -3,12 +3,14 @@ import TaskForm from "./TaskForm";
 import styled from "styled-components";
 import TaskList from "./TaskList";
 
-const StartingLineWrapper = styled.div`
+const StartingLineWrapper = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  height: 100vh;
+  width: 100%;
   cursor: pointer;
 `;
 
@@ -41,8 +43,12 @@ function TaskFormToggle() {
 
   return (
     <>
-      <TaskForm />
-      <TaskList />
+      <section>
+        <TaskForm />
+      </section>
+      <section>
+        <TaskList />
+      </section>
     </>
   );
 }
