@@ -14,17 +14,24 @@ const CircleCounter = styled.div`
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  margin-right: 2rem;
   padding: 2rem;
+  box-sizing: border-box;
   border: 0.4rem solid #000000;
   outline: 0.1rem solid #fdfdfd;
 `;
-
 const TaskCounter = () => {
-  const tasks = useTaskStore((state) => state.tasks);
-  const incompleteCount = tasks.filter((task) => !task.completed).length;
+  const incompleteCount = useTaskStore((state) =>
+    state.tasks.reduce(
+      (count, task) => (!task.completed ? count + 1 : count),
+      0
+    )
+  );
 
-  return <CircleCounter>{incompleteCount}</CircleCounter>;
+  return (
+    <CircleCounter aria-label={`you have ${incompleteCount} left`}>
+      {incompleteCount}
+    </CircleCounter>
+  );
 };
 
 export default TaskCounter;

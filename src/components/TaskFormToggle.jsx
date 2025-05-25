@@ -29,7 +29,12 @@ function TaskFormToggle() {
   if (!showForm) {
     return (
       <StartingLineWrapper onClick={() => setShowForm(true)}>
-        <StartingLine src="/Start.svg" alt="Click to start your Task list." />
+        <StartingLine
+          src="/Start.svg"
+          alt="Click to start your Task list."
+          aria-label="Click to Start Your Task"
+          aria-live="polite"
+        />
       </StartingLineWrapper>
     );
   }

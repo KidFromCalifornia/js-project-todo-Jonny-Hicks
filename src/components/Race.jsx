@@ -11,9 +11,18 @@ const RaceContainer = styled.div`
 `;
 
 const RaceCar = styled.img`
-  width: 12rem;
-  height: 7rem;
+  width: 4rem;
+  height: inherit;
   filter: drop-shadow(-1.7rem 0.05rem 0.5rem rgba(112, 112, 112, 0.4));
+
+  @media (min-width: 450px) {
+    width: 6rem;
+    height: inherit;
+  }
+  @media (min-width: 850px) {
+    width: 12rem;
+    height: inherit;
+  }
 `;
 
 const MovingCar = styled.div`
@@ -25,8 +34,8 @@ const MovingCar = styled.div`
 
 const Flag = styled.span`
   position: absolute;
-  top: 1rem;
-  right: 10px;
+  top: 2rem;
+  right: 1rem;
   font-size: 5rem;
   z-index: 2;
 `;
@@ -41,13 +50,21 @@ const Race = () => {
   let display;
   if (completed === total && total > 0) {
     display = (
-      <Flag role="img" aria-label="Checkered flag">
+      <Flag
+        role="img"
+        aria-label="Checkered flag indicating all tasks completed"
+        aria-live="polite"
+      >
         🏁
       </Flag>
     );
   } else if (incompleteCount === 1 && total > 1) {
     display = (
-      <Flag role="img" aria-label=" white flag">
+      <Flag
+        role="img"
+        aria-live="polite"
+        aria-label=" white flag indicating one task left"
+      >
         🏳️
       </Flag>
     );
@@ -62,7 +79,12 @@ const Race = () => {
   return (
     <RaceContainer>
       <MovingCar $progress={progress}>
-        <RaceCar src="/race-car.png" alt="Race car" />
+        <RaceCar
+          src="/race-car.png"
+          alt="Race car moving for each task finished "
+          loading="lazy"
+          aria-label={`Race car moving ${completed} out of ${total} tasks completed`}
+        />
       </MovingCar>
       {display}
     </RaceContainer>

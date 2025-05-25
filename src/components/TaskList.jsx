@@ -63,8 +63,12 @@ const TaskList = () => {
               <>
                 <img
                   src="/PitStop.png"
-                  alt="No tasks  so take a rest"
-                  style={{ width: "100%", height: "100%" }}
+                  alt={`No tasks for ${category}, so take a rest`}
+                  width="100%"
+                  height="100%"
+                  style={{ width: "100%", height: "auto" }}
+                  aria-label=" No tasks for the category, take a rest"
+                  loading="lazy"
                 />
                 <p style={{ textAlign: "center" }}>
                   No tasks for the {category}, Take a Rest!

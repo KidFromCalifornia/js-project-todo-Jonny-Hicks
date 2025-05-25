@@ -16,7 +16,7 @@ const ListItems = styled.li`
   justify-content: center;
 `;
 
-const Button = styled.button`
+const TaskButton = styled.button`
   padding: 0.25rem 0.75rem;
   color: var(--color-dark-solid);
   background-color: var(--color-text);
@@ -56,12 +56,12 @@ const TaskItem = ({ task }) => {
           {task.text}
         </TaskText>
       </label>
-      <Button
+      <TaskButton
         onClick={() => removeTask(task.id)}
         aria-label={`Delete ${task.text}`}
       >
         Remove
-      </Button>
+      </TaskButton>
     </ListItems>
   );
 };

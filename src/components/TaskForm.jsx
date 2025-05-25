@@ -6,8 +6,6 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  align-content: center;
   background-color: var(--color-dark);
   padding: 1rem;
   border-radius: 2rem;
@@ -17,7 +15,7 @@ const Form = styled.form`
   @media (min-width: 850px) {
     gap: 2rem;
     flex-direction: row;
-
+    align-items: center;
     justify-content: space-between;
   }
 `;
@@ -44,9 +42,10 @@ const Input = styled.input`
 
   @media (min-width: 850px) {
     width: 55%;
+    margin-bottom: 0rem;
   }
 `;
-const Button = styled.button`
+const FormButton = styled.button`
   padding: 0.35rem 0.5rem;
   color: var(--color-dark-solid);
   background-color: var(--color-text);
@@ -66,7 +65,6 @@ const Button = styled.button`
     transform: scale(0.95);
     box-shadow: inset 0.1rem 0.2rem 0.2rem 0.1rem var(--color-dark);
   }
-
   @media (min-width: 850px) {
     padding: 0.35rem 1rem;
     width: 100%;
@@ -116,15 +114,27 @@ const TaskForm = () => {
         aria-label="Add a new task"
       />
       <ButtonContainer>
-        <Button type="submit" onClick={handleSubmit("morning")}>
+        <FormButton
+          type="submit"
+          aria-label=" click to set for morning"
+          onClick={handleSubmit("morning")}
+        >
           Morning
-        </Button>
-        <Button type="submit" onClick={handleSubmit("afternoon")}>
+        </FormButton>
+        <FormButton
+          type="submit"
+          aria-label=" click to set for afternoon"
+          onClick={handleSubmit("afternoon")}
+        >
           Afternoon
-        </Button>
-        <Button type="submit" onClick={handleSubmit("evening")}>
+        </FormButton>
+        <FormButton
+          type="submit"
+          aria-label=" click to set for evening"
+          onClick={handleSubmit("evening")}
+        >
           Evening
-        </Button>
+        </FormButton>
       </ButtonContainer>
     </Form>
   );
