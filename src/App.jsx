@@ -10,7 +10,6 @@ const App = () => {
         <Race />
       </header>
       <main>
-        <h1 hidden>Cross off The Tasks The Finish! </h1>
         <TaskFormToggle />
       </main>
     </>
