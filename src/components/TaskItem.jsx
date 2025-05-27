@@ -27,6 +27,7 @@ const TaskButton = styled.button`
 `;
 const TaskText = styled.span`
   padding-right: 1rem;
+  word-break: break-all;
 `;
 
 const TaskItem = ({ task }) => {

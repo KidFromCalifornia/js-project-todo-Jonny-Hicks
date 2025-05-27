@@ -36,6 +36,8 @@ const Input = styled.input`
   align-items: center;
   align-content: center;
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   [type="text"] {
     text-align: center;
